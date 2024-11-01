@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Unfollow for X by m10sec",
+  "version": "1.0",
+  "description": "Deja de seguir a todas las cuentas mostradas en pantalla en X.",
+"permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+"host_permissions": [
+    "https://*.x.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
